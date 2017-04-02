@@ -1,0 +1,73 @@
+.how_works_block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.how_works_cell{
+  text-align: center;
+  flex-basis: 27%;
+  /*flex-basis: calc(33.33% - 50px * 2/3);*/
+}
+.how_works_text{
+  font-size: 16px;
+  font-weight: 200;
+  color: #3b3b3b;
+}
+.how_works_cell.cell_1{
+  animation-name: moveFromLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+.how_works_cell.cell_2{
+  animation-name: moveFromDown;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+.how_works_cell.cell_3{
+  animation-name: moveFromRight;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+@media screen and (max-width: 768px){
+  .how_works_block{
+    flex-direction: column;
+  }
+  .how_works_cell{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-basis: inherit;
+    margin-top: 25px;
+    padding: 0 15px;
+  }
+  .how_works_cell:nth-child(odd){
+    animation-name: moveFromLeft;
+  }
+  .how_works_cell:nth-child(even){
+    animation-name: moveFromRight;
+  }
+  .how_works_cell:first-of-type{
+    margin-top: 0;
+  }
+  .how_works_cell:nth-child(odd) .how_works_img{
+    margin: 0 25px 0 0;
+  }
+  .how_works_cell:nth-child(even) .how_works_img{
+    order: 2;
+    margin: 0 0 0 25px;
+  }
+}
+@media screen and (max-width: 500px){
+  .how_works_cell{
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .how_works_cell:nth-child(even) .how_works_img{
+    margin: 0;
+    order: inherit;
+  }
+  .how_works_cell:nth-child(odd) .how_works_img{
+    margin: 0;
+  }
+}

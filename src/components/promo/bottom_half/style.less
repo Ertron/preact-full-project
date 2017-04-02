@@ -1,0 +1,56 @@
+.block_bottom{
+  padding-bottom: 15px;
+  background: linear-gradient(0deg, rgb(255,141,5) 0%, rgb(255,166,51) 0%, rgb(242,125,0) 100%);
+}
+.btm_title{
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 50px 0 60px 0;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translate(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveFromDown {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.get_start_btn{
+  text-transform: uppercase;
+  padding: 15px 40px 14px 40px;
+  border-radius: 23px;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+}
+.get_start_btn.white{
+  color: #ff8833;
+  background-color: white;
+  margin: 75px 0;
+}
+.get_start_btn.white:hover{
+  background-color: #F3F3F3;
+}
